@@ -1,0 +1,67 @@
+{% extends 'navbar.html' %}
+{% block main %}
+{% load static %}
+
+<style>
+  #i1:hover{
+  transform: scale(1.05);
+}
+</style>
+
+<br><br><br>
+
+<div class="row mt-1 m-2 p-1  d-flex flex-row justify-content-around">
+    <div id="i1" class="card shadow m-2" style="width: 18rem;">
+        <img src="{% static 'images/cowc.jpg' %}" class="card-img-top" height="200px" alt="...">
+        <div class="card-body text-center">
+          <h5 class="card-title" style="font-family: cursive;">COWS</h5>
+          <a href="{% url 'dtls' 'cownumber' %}" class="stretched-link"></a>
+        </div>
+      </div>
+      <div id="i1" class="card shadow m-2" style="width: 18rem;">
+        <img src="{% static 'images/IMG-20240331-WA0113.jpg' %}" class="card-img-top" height="200px" alt="...">
+        <div class="card-body text-center">
+          <h5 class="card-title" style="font-family: cursive;">GOATS</h5>
+          <a href="{% url 'dtls' 'goatnumber' %}" class="stretched-link"></a>
+        </div>
+      </div>
+      <div id="i1" class="card shadow m-2" style="width: 18rem;">
+        <img src="{% static 'images/IMG-20240331-WA0112.jpg' %}" class="card-img-top" height="200px" alt="...">
+        <div class="card-body text-center">
+          <h5 class="card-title" style="font-family: cursive;">CHICKENS</h5>
+          <a href="{% url 'dtls' 'chickennumber' %}" class="stretched-link"></a>
+        </div>
+      </div>
+      <div id="i1" class="card shadow m-2" style="width: 18rem;">
+        <img src="{% static 'images/IMG-20240331-WA0119.jpg' %}" class="card-img-top" height="200px" alt="...">
+        <div class="card-body text-center">
+          <h5 class="card-title" style="font-family: cursive;">PIGS</h5>
+          <a href="{% url 'dtls' 'pignumber' %}" class="stretched-link"></a>
+        </div>
+      </div>
+</div>
+<div class="row mt-1 m-2 p-1  d-flex flex-row justify-content-around">
+    <div id="i1" class="card shadow m-2" style="width: 18rem;">
+        <img src="{% static 'images/IMG-20240331-WA0118.jpg' %}" class="card-img-top" height="200px" alt="...">
+        <div class="card-body text-center">
+          <h5 class="card-title" style="font-family: cursive;">DUCKS</h5>
+          <a href="{% url 'dtls' 'ducknumber' %}" class="stretched-link"></a>
+        </div>
+      </div>
+      <div id="i1" class="card shadow m-2" style="width: 18rem;">
+        <img src="{% static 'images/IMG-20240331-WA0115.jpg' %}" class="card-img-top" height="200px" alt="...">
+        <div class="card-body text-center">
+          <h5 class="card-title" style="font-family: cursive;">RABBITS</h5>
+          <a href="{% url 'dtls' 'rabbitnumber' %}" class="stretched-link"></a>
+        </div>
+      </div>
+      <div id="i1" class="card shadow m-2" style="width: 18rem;">
+        <img src="{% static 'images/IMG-20240331-WA0120.jpg' %}" class="card-img-top" height="200px" alt="...">
+        <div class="card-body text-center">
+          <h5 class="card-title" style="font-family: cursive;">HORSES</h5>
+          <a href="{% url 'dtls' 'horsenumber' %}" class="stretched-link"></a>
+        </div>
+      </div>
+</div>
+
+{% endblock main %}

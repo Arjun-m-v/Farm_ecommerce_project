@@ -1,0 +1,38 @@
+{% extends 'navbar.html' %}
+{% block main %}
+
+<br>
+
+    <body>
+        <div class="p-5 d-flex flex-column style="background-color: #5052e6;>
+            {% for i in products %}
+            <div class="border border-3 mt-5 shadow rounded row">
+                <div class="col-4 m-1">
+                    <img src="{{i.image.url}}" height="300px" width="300px" alt="img">
+                </div>
+                <div class="col-6">
+                    <h1>{{i.title}}</h1>
+                    <h3>₹{{i.price}}</h3>
+                    <h3>{{i.description}}</h3>
+                    <a href="{% url 'det' i.id %}" class="btn btn-info">View Details</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </body>
+</html>
+{% endblock main %}
+
+
+
+            <!-- <div class="border border-3 mt-5 shadow rounded row">
+                <div class="col-4">
+                    <img src="{{i.image.url}}" height="300px" width="300px" alt="img">
+                </div>
+                <div class="col-8">
+                    <h1>{{i.title}}</h1>
+                    <h3>₹{{i.price}}</h3>
+                    <h3>{{i.description}}</h3>
+                    <a href="{% url 'det' i.id %}" class="btn btn-info">View Details</a>
+                </div>
+            </div> -->

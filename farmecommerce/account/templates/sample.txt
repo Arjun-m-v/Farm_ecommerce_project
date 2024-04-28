@@ -1,0 +1,64 @@
+<nav class="navbar navbar-expand-lg" style="background-color: #242582;">
+            <div class="container-fluid">
+              <div>
+                <a href=""><i class="fa-solid fa-tractor m-4"></i></a>
+                <a class="navbar-brand" style="font-family: cursive;" href="#"><b>FARMO-Co.</b></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              </div>
+              <div class="navbar-nav justify-content-end ">
+                <ul>
+                  <li class="nav-item dropdown">
+                    <a class=" mb-2 mb-lg-0 nav-link dropdown-toggle" style="font-family: monospace;" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <b>Products</b>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="{% url 'dtls' 'litre' %}">Milk</a></li>
+                      <li><a class="dropdown-item" href="{% url 'dtls' 'dozen' %}">Egg</a></li>
+                      <li><a class="dropdown-item" href="{% url 'dtls' 'kg' %}">Meat</a></li>
+                      <li><a class="dropdown-item" href="{% url 'dtls' 'packet' %}">Butter</a></li>
+                      <li><a class="dropdown-item" href="{% url 'dtls' 'bottle' %}">Gee</a></li>
+                      <li><a class="dropdown-item" href="{% url 'dtls' 'tin' %}">Milk Powder</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="{% url 'adtls' %}">Animals</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                      <a href="{% url 'lcart' %}" class="nav-link btn btn-outline-success m-2">
+                        <i class="fa-solid fa-cart-plus fa-beat-fade"></i>
+                        <span>{{count}}</span>
+                      </a>
+                    </li>
+                  </ul>
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                      <a href="{% url 'orl' %}" class="btn btn btn-outline-info m-2">Your Orders</a>
+                      </li>
+                  </ul>
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                      <a href="{% url 'logout' %}" class="btn btn-outline-danger m-2">Logout</a>
+                    </li>
+                  </ul>
+              </div>
+              <!-- <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li> -->
+                <!-- <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                  </li>
+                  
+                  
+                  
+                </ul> -->
+                <!-- <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form> -->
+            </div>
+          </nav>

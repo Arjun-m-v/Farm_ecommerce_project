@@ -1,0 +1,29 @@
+{% extends 'navbar.html' %}
+{% block main %}
+{% load static %}
+
+<div class="mt-1 m-2 p-1 d-flex flex-row justify-content-around ">
+    <div class="card shadow m-2" style="width: 18rem;">
+      <img src="{% static 'images/butter.jpg' %}" class="card-img-top" height="200px" alt="...">
+      <div class="card-body text-center">
+        <h5 class="card-title">BUTTER</h5>
+        <a href="{% url 'dtls' 'butter' %}" class="stretched-link"></a>
+      </div>
+    </div>
+    <div class="card shadow m-2" style="width: 18rem;">
+      <img src="{% static 'images/gee.jpg' %}" class="card-img-top" height="200px" alt="...">
+      <div class="card-body text-center">
+        <h5 class="card-title">GEE</h5>
+        <a href="{% url 'dtls' 'bottle' %}" class="stretched-link"></a>
+      </div>
+    </div>
+    <div class="card shadow m-2" style="width: 18rem;">
+      <img src="{% static 'images/milkpowder.jpg' %}" class="card-img-top" height="200px" alt="...">
+      <div class="card-body text-center">
+        <h5 class="card-title">MILK POWDER</h5>
+        <a href="{% url 'dtls' 'tin' %}" class="stretched-link"></a>
+      </div>
+    </div>
+  </div>
+
+  {% block main %}

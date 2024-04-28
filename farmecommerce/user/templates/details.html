@@ -1,0 +1,68 @@
+{% extends 'navbar.html' %}
+{% block main %}
+
+<br><br><br>
+
+<div class="p-5 m-5 d-flex justify-content-center border shadow rounded" style="height: 80vh;">
+    <div class="card shadow m-2" style="width: 20rem;">
+        <img src="{{product.image.url}}" class="card-img-top" height="200px" alt="...">
+        <div class="card-body text-center">
+            <h5 class="card-title" style="font-family: cursive;">{{product.title}}</h5>
+            <h5 class="card-body">{{product.description}}</h5>
+            <h5 class="card-body">₹{{product.price}}</h5>
+            <a href="{% url 'acart' product.id %}" class="btn btn-primary mt-5">
+            <i class="fa-solid fa-cart-plus"></i>Add to Cart</a>
+        </div>
+    </div>
+</div>
+
+<div class="p-3 m-3 border shadow w-90">
+    <h3>
+        <span>User Review</span> <br><br>
+        <button class="btn btn-primary ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+            Add Review
+          </button>
+    </h3>
+    <div class="collapse" id="collapseExample">
+        <form action="{% url 'addr' product.id %}" method="post">
+            {% csrf_token %}
+            <textarea name="rev" id="" cols="60" rows="10"></textarea>
+            <button class="btn btn-success" type="submit">Submit</button>
+        </form>
+    </div>
+
+    <h3 class="text-center text-info">REVIEWS :</h3>
+
+    {% for i in reviews %}
+        <div class="border border-dark border-1 m-3">
+            {{i.review}}
+            <span class="float-end">
+                - {{i.user}},{{i.date}}
+            </span>
+        </div>
+    {% endfor %}
+</div>
+    
+
+
+{% endblock main %}
+
+
+
+
+
+
+<!-- <div>
+        <img src="{{product.image.url}}" width="400px" class="img-fluid" alt="">
+    </div>
+    <div class="p-5">
+        <h1 class="mt-3">{{product.title}}</h1>
+        <h2 class="mt-3">{{product.description}}</h2>
+        <h2 class="mt-3">Category:{{product.categories}}</h2>
+        <h2 class="mt-3">₹{{product.price}}</h2>
+        <a href="{% url 'acart' product.id %}" class="btn btn-primary mt-5">
+            <i class="fa-solid fa-cart-plus"></i>
+            Add to Cart
+        </a><br>
+        <a href="{% url 'por' product.id %}" class="btn btn-success mt-5">Place Order</a>
+    </div> -->
